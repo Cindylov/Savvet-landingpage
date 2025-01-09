@@ -1,81 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Savvet</title>
     <link rel="stylesheet" href="output.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Odor+Mean+Chey&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Odor+Mean+Chey&display=swap"
+        rel="stylesheet">
 
     <!-- glider cdn css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" />
 </head>
-<body>
+
+<body class="scrollbar-hidden">
     <!-- <div class="text-center bg-primary2 text-primary1 font-odorMeanChey">
         Testing the tailwind pls delete
     </div> -->
 
-    <!-- hero section -->
-    <section class="bg-primary3 lg:pt-[134px] lg:pb-[229px] shadow-lg md:pt-[64px] md:pb-[68px] pt-[44px] pb-[80px]">
-        <div class="relative px-2 mx-auto w-fit md:px-0">
-            <h1 class="text-center font-odorMeanChey text-primary1 line text-custom-53 leading-custom-74 min-w-[350px] overflow-hidden">
-                find hidden<br class="md:hidden"> 
-                <span class="text-shadow text-primary2">
-                    location
-                </span>
-                gems<br class=""> & real reviews<br class="md:hidden"> for places<br class="lg:hidden"> around you 
-                <span class="relative">
-                   ! 
-                   <span class="absolute top-[10px] left-0 z-30 md:hidden">!</span>
-                   <img src="./assets/images/Ellipse_no_shadow.svg" alt="" class="absolute left-[3px] w-[10px] bottom-7 shadow-dotShadow rounded-xl">
-                </span>
-            </h1> 
 
-            <!-- lg devices -->
-            <img src="./assets/images/empty_note.svg" alt="" class="absolute bottom-[-42px] left-[-80px] hidden lg:block">
-            <img src="./assets/images/curvy_red_line.svg" alt="" class="absolute bottom-[-0.27rem] left-[5.2rem] hidden lg:block">
-            <div class="absolute bottom-[-62px] right-[375px] z-20 hidden lg:block">
-                <div class="relative w-fit">
-                    <img src="./assets/images/zigzag_note.svg" class="" alt="">  
-                    <img src="./assets/images/x marks the perfect spot.svg" alt="" class="absolute left-[25px] top-[18px]">                      
+    <!-- hero section -->
+    <section class="bg-primary3 lg:pb-[229px] md:pb-[68px] pb-[80px]">
+        <!-- nav menu -->
+        <div class="max-w-[1431px] mx-auto">
+            <div class="flex text-custom-16 md:text-custom-24 pl-[16px] md:pl-[40px] font-medium py-[16px] w-fit cursor-pointer"
+                id="menuBtn">
+                <img src="./assets/images/Savvet_ menu horizontal.svg" alt="" class="w-[20px] md:w-[28px]">
+                <span class="uppercase font-raleway ml-[8px]">menu</span>
+            </div>
+            <div class="relative">
+                <div class="font-medium font-raleway bg-white w-fit justify-around py-[16px] px-[16px] md:px-[40px] rounded-br-[12px] flex-col lg:flex-row hidden fixed top-0 z-30 text-custom-16 md:text-custom-24 shadow lg:items-center transition-all duration-300 transform opacity-0 scale-90"
+                    id="menuList">
+                    <span class="flex items-center cursor-pointer navbar-link w-fit" id="closeMenuBtn">
+                        <img src="./assets/images/Savvet_ Close icon.svg" alt="" class="mr-[8px] w-[20px] md:w-[28px]">
+                        Close
+                    </span>
+
+                    <!-- line -->
+                    <span>
+                        <img src="./assets/images/Line_md.svg" alt="" class="md:hidden my-[8px] md:my-0">
+                    </span>
+                    <span>
+                        <img src="./assets/images/Line_mobile.svg" alt=""
+                            class="hidden md:block lg:hidden md:my-[16px] lg:my-0">
+                    </span>
+                    <span>
+                        <img src="./assets/images/Line_vertical.svg" alt="" class="hidden lg:block lg:px-[30px]">
+                    </span>
+
+                    <a href="#" class="relative navbar-link w-fit"> join our waitlist</a>
+
+                    <!-- line -->
+                    <span>
+                        <img src="./assets/images/Line_md.svg" alt="" class="md:hidden my-[8px] md:my-0">
+                    </span>
+                    <span>
+                        <img src="./assets/images/Line_mobile.svg" alt=""
+                            class="hidden md:block lg:hidden md:my-[16px] lg:my-0">
+                    </span>
+                    <span>
+                        <img src="./assets/images/Line_vertical.svg" alt="" class="hidden lg:block lg:px-[30px]">
+                    </span>
+
+                    <a href="#" class="relative navbar-link w-fit"> send us a message</a>
+                    <img src="./assets/images/nav_hover_red_tape.svg" alt="" class="absolute transition-all duration-500 ease-out -z-10" id="hoverImage">
                 </div>
-            </div>  
-            <!-- md devices -->
-            <img src="./assets/images/empty_note.svg" alt="" class="absolute bottom-[21px] left-[-26px] hidden md:block lg:hidden">
-            <img src="./assets/images/curvy_red_line.svg" alt="" class="absolute bottom-[70px] left-[110px] hidden md:block lg:hidden">
-            <div class="absolute bottom-[13px] right-[32px] z-20 hidden md:block lg:hidden">
-                <div class="relative w-fit">
-                    <img src="./assets/images/zigzag_note.svg" class="" alt="">  
-                    <img src="./assets/images/x marks the perfect spot.svg" alt="" class="absolute left-[25px] top-[18px]">                      
-                </div>
-            </div>           
-            <!-- mobile devices -->
-            <img src="./assets/images/empty_note_short.svg" alt="" class="absolute bottom-[105px] left-[-20px] md:hidden">
-            <img src="./assets/images/curvy_line_short.svg" alt="" class="absolute bottom-[150px] left-[118px] md:hidden">
-            <div class="absolute bottom-[19px] right-[13px] z-20 md:hidden">
-                <div class="relative w-fit">
-                    <img src="./assets/images/zigzag_note.svg" class="" alt="">  
-                    <img src="./assets/images/x marks the perfect spot.svg" alt="" class="absolute left-[25px] top-[18px]">                      
-                </div>
-            </div>           
+            </div>
         </div>
 
-        <div class="relative lg:mt-[49px] md:mt-[40px] mt-[36px] w-fit mx-auto px-2 md:px-0">
+
+        <div class="relative px-2 mx-auto w-fit md:px-0 lg:pt-[134px] md:pt-[64px] pt-[44px]">
+            <h1
+                class="text-center font-odorMeanChey text-primary1 line text-custom-48 md:text-custom-53 leading-custom-67 md:leading-custom-74 min-w-[350px] overflow-hidden">
+                find hidden<br class="md:hidden">
+                <span class="text-shadow text-primary2" id="locationText">
+                    location
+                </span>
+                gems<br class=""> & real reviews<br class="md:hidden"> for places<br class="lg:hidden"> around you
+                <span class="relative">
+                    !
+                    <span class="absolute top-[10px] left-0 z-30 md:hidden">!</span>
+                    <img src="./assets/images/Ellipse_no_shadow.svg" alt=""
+                        class="absolute left-[2px] w-[10px] bottom-[27px] shadow-dotShadow rounded-xl">
+                </span>
+            </h1>
+
+            <!-- lg devices -->
+            <img src="./assets/images/empty_note.svg" alt=""
+                class="absolute bottom-[-42px] left-[-80px] hidden lg:block">
+            <img src="./assets/images/curvy_red_line.svg" alt=""
+                class="absolute bottom-[-0.27rem] left-[5.2rem] hidden lg:block">
+            <div class="absolute bottom-[-63px] right-[375px] z-20 hidden lg:block">
+                <div class="relative w-fit">
+                    <img src="./assets/images/zigzag_note.svg" class="" alt="">
+                    <img src="./assets/images/x marks the perfect spot.svg" alt=""
+                        class="absolute left-[25px] top-[18px]">
+                </div>
+            </div>
+            <!-- md devices -->
+            <img src="./assets/images/empty_note.svg" alt=""
+                class="absolute bottom-[22px] left-[-26px] hidden md:block lg:hidden">
+            <img src="./assets/images/curvy_red_line.svg" alt=""
+                class="absolute bottom-[70px] left-[107px] hidden md:block lg:hidden">
+            <div class="absolute bottom-[13px] right-[35px] z-20 hidden md:block lg:hidden">
+                <div class="relative w-fit">
+                    <img src="./assets/images/zigzag_note.svg" class="" alt="">
+                    <img src="./assets/images/x marks the perfect spot.svg" alt=""
+                        class="absolute left-[25px] top-[18px]">
+                </div>
+            </div>
+            <!-- mobile devices -->
+            <img src="./assets/images/empty_note_short.svg" alt="" class="absolute bottom-[90px] left-[-7px] md:hidden">
+            <div class="relative overflow-hidden w-fit h-fit">
+                <img src="./assets/images/curvy_line_short.svg" alt="" class="curvy-line absolute bottom-[134px] left-[122px] md:hidden">  
+            </div>
+            <div class="absolute bottom-[15px] right-[22px] z-20 md:hidden">
+                <div class="relative w-fit">
+                    <img src="./assets/images/zigzag_note.svg" class="" alt="">
+                    <img src="./assets/images/x marks the perfect spot.svg" alt=""
+                        class="absolute left-[25px] top-[18px]">
+                </div>
+            </div>
+        </div>
+
+        <div class="relative lg:mt-[66px] md:mt-[40px] mt-[36px] w-fit mx-auto px-2 md:px-0">
             <!-- texts -->
-            <img src="./assets/images/discover hidden spots and locations that fit your vibe & budget. Savvet’s here to help you explore with confidence. .svg" alt="" class="hidden lg:block">
-            <img src="./assets/images/discover hidden spots and locations that fit your vibe & budget. Savvet’s here to help you explore with confidence_tab .svg" alt="" class="hidden md:block lg:hidden">
-            <img src="./assets/images/discover hidden spots and locations that fit your vibe & budget. Savvet’s here to help you explore with confidence_mobile.svg" alt="" class="md:hidden">
-            
+            <img src="./assets/images/discover hidden spots and locations that fit your vibe & budget. Savvet’s here to help you explore with confidence. .svg"
+                alt="" class="hidden lg:block">
+            <img src="./assets/images/discover hidden spots and locations that fit your vibe & budget. Savvet’s here to help you explore with confidence_tab .svg"
+                alt="" class="hidden md:block lg:hidden">
+            <img src="./assets/images/discover hidden spots and locations that fit your vibe & budget. Savvet’s here to help you explore with confidence_mobile.svg"
+                alt="" class="md:hidden">
+
             <!-- tapes -->
-            <img src="./assets/images/red_tape.svg" alt="" class="absolute lg:top-[-2px] lg:right-[-73px] lg:block hidden">
-            <img src="./assets/images/red_tape.svg" alt="" class="absolute md:left-[-41px] md:top-[35px] hidden md:block lg:hidden">
+            <img src="./assets/images/red_tape.svg" alt=""
+                class="absolute lg:top-[-2px] lg:right-[-73px] lg:block hidden">
+            <img src="./assets/images/red_tape.svg" alt=""
+                class="absolute md:left-[-41px] md:top-[35px] hidden md:block lg:hidden">
             <img src="./assets/images/red_tape_short.svg" alt="" class="absolute left-[-10px] top-[75px] md:hidden">
         </div>
 
         <div class="lg:mt-[60px] md:mt-[80px] mt-[48px] flex justify-center px-2 md:px-0">
-            <a href="#" class=" lg:h-[92px] lg:w-[421px] md:h-[72px] md:w-[664px] h-[60px] w-[358px] bg-primary2 rounded-[20px] shadow-buttonShadow text-white font-raleway font-extrabold text-[24px] flex justify-center items-center active:bg-hover1">
+            <a href="#"
+                class=" lg:h-[92px] lg:w-[421px] md:h-[72px] md:w-[664px] h-[60px] w-[358px] bg-primary2 rounded-[20px] shadow-buttonShadow text-white font-raleway font-extrabold text-[24px] flex justify-center items-center active:bg-hover1">
                 <span>Join the waitlist today</span> 
-            </a> 
+            </a>
         </div>
 
         <div class="lg:mt-[122px] md:mt-[100px] mt-[40px] mx-auto max-w-[1431px]">
@@ -85,27 +155,28 @@
                 </span>
             </div>
             <div class="">
-                <div class="flex ml-[89px] gap-[48px] flex-nowrap overflow-x-auto scrollbar-hidden max-w-[1411px] mx-auto">
+                <div
+                    class="flex ml-[89px] gap-[48px] flex-nowrap overflow-x-auto scrollbar-hidden max-w-[1411px] mx-auto">
                     <span class="flex-shrink-0 text-custom-53 text-primary2 font-odorMeanChey text-shadow">
                         real reviews
-                    </span>                
+                    </span>
                     <span class="flex-shrink-0 text-custom-53 text-customYellow font-odorMeanChey text-shadow">
                         explore places
-                    </span>                
+                    </span>
                     <span class="flex-shrink-0 text-custom-53 font-odorMeanChey text-hover1 text-shadow">
                         community ratings
-                    </span>                
+                    </span>
                     <span class="flex-shrink-0 text-custom-53 font-odorMeanChey text-customBlue text-shadow">
                         gems
-                    </span>                
-                     
-                </div>               
-                
+                    </span>
+
+                </div>
+
                 <div class="flex gap-[48px] scrollbar-hidden ml-[21px] overflow-x-auto max-w-[1411px] mx-auto">
                     <span class="flex-shrink-0">
                         <img src="./assets/images/exposed.svg" alt="" class="mb-[-15px]">
                         <span class="text-custom-53 font-odorMeanChey text-customSky text-shadow">hidden rules</span>
-                    </span> 
+                    </span>
                     <span class="flex-shrink-0 text-custom-53 font-odorMeanChey text-hover1 text-shadow">
                         find locations
                     </span>
@@ -116,13 +187,66 @@
                         real reviews
                     </span>
                 </div>
-                
-            </div> 
+
+            </div>
         </div>
+    </section>
+
+    <!-- video section -->
+    <section class="overflow-hidden bg-videoSectionBg shadow-inner-custom">
+            <div class="flex items-center justify-center w-full xl:h-[796px] md:h-[744px] h-[676px] max-w-[1411px] mx-auto">
+                <div class="relative">
+                    <div class="w-[294px] h-[476px] md:w-[300px] xl:w-[344px] md:h-[485px] xl:h-[532px] rounded-[7px] shadow-videoShadow overflow-hidden">
+                       <video src="./assets/videos/-6d19-4c96-a866-a1ad96a56631.mp4" class="h-[full] w-[full]"></video> 
+                    </div>
+                    
+                    <span class="absolute font-raleway text-[64px] md:text-[120px] xl:text-[205px] text-primary4 font-extrabold text-nowrap top-[185px] left-[-35px] md:left-[-192px] md:top-[160px] xl:left-[-430px] xl:top-[130px] text-stroke-light -z-10 transition-transform duration-500" id="scale-out-text">is this you??</span>
+                    
+                    <span class="absolute font-extrabold text-nowrap font-raleway text-[64px] md:text-[120px] xl:text-[205px] text-transparent md:text-stroke text-stroke-bold top-[185px] left-[-18px] md:top-[160px] md:left-[-25px] xl:left-[-25px] xl:top-[130px] transition-opacity duration-500" id="fade-out-text">
+                        <span class=" md:hidden">s t</span><span class="xl:hidden">h</span>is yo<span class="md:hidden">u?</span>
+                    </span>
+                    
+                    <!-- items that shows when on this scroll position -->
+                    <span class="absolute font-raleway text-primary4 text-[29px] font-extrabold lg:top-[250px] xl:top-[280px] left-[100px] duration-700 -z-10 transition-all opacity-0" id="hidden-text">is this you??</span>
+                    <span class="absolute lg:top-[280px] xl:top-[310px] left-[-250px] opacity-0 transition duration-500" id="pop-out-img">
+                        <img src="./assets/images/video_vector.svg" alt="">
+                    </span>
+                    
+                    <span class="items-center gap-[32px] absolute lg:top-[247px] xl:top-[277px] right-[-255px] hidden opacity-0 transition duration-500" id="prev-next-btn">
+                        <!-- previous btn -->
+                        <button class="font-raleway p-[10px] border-[1px] border-customOrange rounded-[11px] text-video-btn-color flex items-center font-normal group transition-all duration-300">
+                            <span class="relative">
+                                <!-- Default short arrow -->
+                                <img
+                                  src="./assets/images/short-left-arrow.svg"
+                                  alt="Short arrow"
+                                  class="mr-[4px] transition-all duration-500 group-hover:opacity-0 group-hover:hidden"
+                                />
+                                <!-- Long arrow on hover -->
+                                <img
+                                  src="./assets/images/long-left-arrow.svg"
+                                  alt="Long arrow"
+                                  class="hidden transition-all duration-500 opacity-0 group-hover:opacity-100 group-hover:block mr-[4px]"
+                                />
+                            </span>
+                            <span>Prev</span>
+                        </button>
+                        
+                        <!-- next btn -->
+                        <button class="font-raleway p-[10px] border-[1px] border-customOrange rounded-[11px] text-video-btn-color flex items-center font-normal group transition-all duration-300">
+                            <span class="mr-[4px]">Next</span>
+                            <span class="relative">
+                                <img src="./assets/images/long-right-arrow.svg" alt="" class="transition-all duration-500 group-hover:opacity-0 group-hover:hidden">
+                            </span>
+                        </button>
+                    </span>
+                </div>            
+            </div>
     </section>
 
     <script src="./script.js"></script>
     <!-- glider cdn js -->
     <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
 </body>
+
 </html>
