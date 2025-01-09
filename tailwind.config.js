@@ -9,6 +9,7 @@ module.exports = {
         primary3: '#FFF4E4',
         primary4: '#252121A8',
         hover1: '#B892FF',
+        primary3:'#FFF1D0',
         customYellow: '#F0C808',
         customBlue: '#2E5EAA',
         customSky: '#41EAD4',
