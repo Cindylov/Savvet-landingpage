@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html"],
+  content: ["./*.php","./waitlist/*.php"],
   theme: {
     extend: {
       colors: {
@@ -8,13 +8,17 @@ module.exports = {
         primary2: '#F76C5E',
         primary3: '#FFF4E4',
         primary4: '#252121A8',
+        inputBorder: '#CAC0B1',
+        inputPlaceholder: '#9C9995',
+        inputFocus: '#221047',
+        formSubmitBtn: '#0085FF',
         hover1: '#B892FF',
-        primary3:'#FFF1D0',
         customYellow: '#F0C808',
         customBlue: '#2E5EAA',
         customSky: '#41EAD4',
         customOrange: '#F68E5F',
         'video-btn-color': '#2E4057',
+        'disabled-btn-color': '#81818B',
       },
       backgroundImage: {
         videoSectionBg: 'radial-gradient(41.93% 137.21% at 58.07% 56.6%, rgba(190, 179, 163, 0.4) 0%, rgba(184, 146, 255, 0.308) 100%)',
@@ -22,6 +26,8 @@ module.exports = {
       fontFamily: {
         raleway: ['Raleway', 'sans-serif'],
         odorMeanChey: ['Odor Mean Chey', 'cursive'],
+        oldenBurg: ['Oldenburg', 'serif'],
+        caveat: ['Caveat', 'cursive'],
       },
       fontSize: {
         'custom-53': '53px', // Custom font size
@@ -33,11 +39,21 @@ module.exports = {
         'custom-74': '74.62px', // Custom line height
         'custom-67': '67.58px', // Custom line height
       },
+
+      rotate: {
+        '7.17': '-7.17deg',
+        '55': '-55deg',
+      },
       boxShadow: {
         buttonShadow: '3px 4px 0px 0px #3B3548', // Example Figma shadow
+        formButtonShadow: '3px 4px 0px 0px #F76C5E', // Example Figma shadow
+        formSubmittedShadow: '3px 4px 0px 0px #0085FF', // Example Figma shadow
         dotShadow: '0.06rem 0.09rem 0px 0px #3B3548', // Example Figma shadow
         videoShadow: '-16px 8px 0 0 #2E4057',
         'inner-custom': 'inset 0 4px 9px 0 #00000040, inset 0 -4px 13px 0 #00000040',
+        // 'inner-custom-1': '4px 5px 0px 0px #000000',
+        'inner-custom1': '2px 3px 1px 0px #00000036 inset, -1px -3px 5px 0px #FFFEFC1F inset',
+
       },
 
       animation: {

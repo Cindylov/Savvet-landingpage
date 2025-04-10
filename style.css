@@ -1,95 +1,258 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import "primeicons/primeicons.css";
 
 @keyframes reveal-line {
-    0% {
-      transform: scaleX(0);
-    }
-    100% {
-      transform: scaleX(1);
-    }
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
-  
+
 .curvy-line {
-    transform-origin: left; /* Start drawing from the left */
-    animation: reveal-line 2s ease-in-out forwards;
+  transform-origin: left; /* Start drawing from the left */
+  animation: reveal-line 2s ease-in-out forwards;
 }
 
 .text-stroke {
-    -webkit-text-stroke: 2px #A17BE8;
-    -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #a17be8;
+  -webkit-text-fill-color: transparent;
 }
-.text-stroke-light{
-    -webkit-text-stroke: 1px #A17BE8;
-}
-
-.text-stroke-bold{
-    -webkit-text-stroke: 3px #A17BE8;
-    -webkit-text-fill-color: transparent;
+.text-stroke-light {
+  -webkit-text-stroke: 1px #a17be8;
 }
 
-
-.fade-out{
-    animation: fade-out 1.0s ease-in-out forwards;
-}
-.scale-out{
-    animation: scale-out 0.5s ease-in-out forwards;
-}
-.pop-out{
-    animation: pop-out 0.3s ease-in-out forwards;
+.text-stroke-bold {
+  -webkit-text-stroke: 3px #a17be8;
+  -webkit-text-fill-color: transparent;
 }
 
-.slide-text{
-    animation: slide-text 0.5s ease-in-out forwards;
+.fade-out {
+  animation: fade-out 1s ease-in-out forwards;
+}
+.scale-out {
+  animation: scale-out 0.5s ease-in-out forwards;
+}
+.pop-out {
+  animation: pop-out 0.3s ease-in-out forwards;
 }
 
-@keyframes fade-out{
-    0%{
-        opacity: 1;
-    }
-    30%{
-        opacity: 0.5;
-    }
-    100%{
-        opacity: 0;
-    }
+.slide-text {
+  animation: slide-text 0.5s ease-in-out forwards;
 }
 
-@keyframes scale-out{
-    0%{
-        transform: scale(1);
-        opacity: 1;
-    }
-    100%{
-        transform: scale(0);
-        opacity: 0;
-    }
+#firstText,
+#secondText,
+#thirdText,
+#fourthText,
+#fifthText,
+#sixthText,
+#seventhText,
+#eightText,
+#textRedTape {
+  transition: transform 0.3s ease-in-out;
+}
+.firstText {
+  animation: firstText 1s alternate-reverse infinite;
+  animation-fill-mode: both; /* Keeps the state between animations */
 }
 
-@keyframes pop-out{
-    0%{
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    50%{
-        transform: scale(1.15);
-        opacity: 1; 
-    }
-    100%{
-        transform: scale(1.0);
-        opacity: 1 
-    }
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-@keyframes slide-text{
-    0%{
-        transform: translateX(0px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(-450px);
-        opacity: 1;
-    }
+@keyframes scale-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes pop-out {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-text {
+  0% {
+    transform: translateX(0px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-450px);
+    opacity: 1;
+  }
+}
+
+@keyframes firstText {
+  0% {
+    transform: rotate(-5.59deg) translateX(40px); /* Hold the position for delay */
+  }
+
+  100% {
+    transform: rotate(21.82deg) translateX(-10px); /* Reach the end state */
+  }
+}
+
+.tada {
+  animation: tada 1s both;
+  /* animation-fill-mode: forwards; */
+  animation-iteration-count: 1;
+}
+
+@keyframes tada {
+  0% {
+    transform: scaleX(1);
+  }
+
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.breathing {
+  animation: breathing 1.3s alternate infinite;
+}
+.breathing-opacity {
+  animation: breathing-opacity 1.3s alternate infinite;
+}
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  70% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1.3);
+  }
+}
+@keyframes breathing-opacity {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  30% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  70% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
+/* footer */
+.footer {
+  background: url("./assets/images/Rectangle.svg") center center no-repeat;
+  background-size: cover;
+}
+
+.swiper-container {
+  width: 1440px;
+  height: auto;
+}
+
+#formSection{
+  background: url('./assets/images/Noise_&_Texture.svg') center center;
+  background-size: cover;
+  /* background-color: #FFF4E4; */
+  height: 1000px;
+  margin-top: -100px;
+}
+
+
+/* Scale text on hover */
+#image-container span {
+  transition: transform 0.3s ease, all 0.3s ease;
+  display: inline-block; /* Ensure transform works properly */
+  cursor: pointer;
+}
+
+/* Default highlighted span */
+#image-container span.default {
+  transform: scale(2.5);
+  font-weight: 700;
+}
+
+#image-container span:hover {
+  font-weight: 700;
+  /* line-height: 4px; */
+}
+
+#image-container span.span-1-5px:hover{
+  transform: scale(5); /* Scale up text */
+}
+
+#image-container span.span-2px:hover{
+  transform: scale(3); /* Scale up text */
+}
+
+#image-container span.span-3px:hover{
+  transform: scale(2.5); /* Scale up text */
+}
+
+#image-container span.span-5px:hover{
+  transform: scale(1.8); /* Scale up text */
+}
+
+/* Transition effect for #location-img */
+#location-img {
+  transition: all 0.5s ease;
 }
